@@ -19,6 +19,11 @@ public class Autor {
     }
 
     public boolean adicionarLivro(Livro livro) {
+        if(totalLivros < MAX_LIVROS){
+            this.livros[totalLivros] = livro;
+            totalLivros++;
+            return true;
+        }
         return false;
     }
     public boolean removerLivro(Livro livro) {
@@ -26,6 +31,18 @@ public class Autor {
     }
 
     void listarLivros() {
+        for (int i = 0; i < livros.length; i++) {
+            System.out.println(i);
+        }
     }
 
+    public String getNome() {
+        return this.nome;
+    }
+    public String getId(){
+        return this.id;
+    }
+    public int getTotalLivros(){
+        return this.totalLivros;
+    }
 }
