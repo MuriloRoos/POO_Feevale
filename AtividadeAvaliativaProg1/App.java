@@ -10,7 +10,8 @@ public class App {
 
         System.out.println("INFORME o Nome da linguagem de programação");
         String NomeLinguagem = leitor.nextLine();
-        Linguagem NomeLinguagemCurso = new Linguagem(NomeLinguagem, null)
+
+        Linguagem LinguagemUsuario = new Linguagem(NomeLinguagem, null);
     
         System.out.println("Informe o nome do Curso");
         String NomeCurso = leitor.nextLine();
@@ -20,11 +21,12 @@ public class App {
 
         System.out.println("Informe o numero total de horas");
         int TotalHorasCurso = leitor.nextInt();
+        leitor.nextLine();
 
-        Curso novCurso = new Curso(NomeCurso, NivelCurso, TotalHorasCurso, NomeLinguagemCurso);
+        Curso novoCurso = new Curso(NomeCurso, NivelCurso, TotalHorasCurso, LinguagemUsuario);
+        LinguagemUsuario.setCurso(novoCurso);
 
         leitor.close();
     }
 
 }
-

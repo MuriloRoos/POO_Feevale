@@ -21,7 +21,7 @@ public class CursoPresencial extends Curso{
     }
 
     public void setVagas(int vagas){
-        if(this.vagas > 1)
+        if(this.vagas < 1)
             System.out.println("Erro: O Numero de alunos deve ser no mínimo 1");
         this.vagas = vagas;
     }
